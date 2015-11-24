@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Twilio SMS Sender</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href=img/icon.png>
+
+    <!-- my script and require js -->
+    <script data-main="js/app.js" src="js/require.js"></script>
+
+
+
+</head>
+
+<body class="container" ng-app = "TwilioApp" ng-controller = "MessageController">
+<h1>This is Quinn's SMS Text Message Alert Sending Web Page!</h1>
+<p>Powered by Twilio</p>
+<div class = "form-group">
+<input type="text" class="form-control" placeholder="10 digit mobile number" ng-model = index.messageTo">
+<input type="text" class="form-control" placeholder="Your text here" ng-model = "index.messageBody">
+    <input type="text" class="form-control" placeholder="Picture URL" ng-model = "index.messagePicture">
+<button type="submit" class="btn btn-primary submit">Send</button>
+</div>
+
+
+</body>
+</html>
