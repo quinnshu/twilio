@@ -20,7 +20,8 @@ When you sign up, they will give you an AccountSID and an AuthToken, essentially
 You'll have to take these, put them in a file called credentials.txt, and store them in JSON notation.
 {"username":"Your AccountSID", "authkey":"Your AuthKey"}
 Put this file iin the same location as index.html.
-Then, modify the url field (line 6 of app.js) to be the location of your file. (Just 'credentials.txt' is fine)
+Then, modify the url field (line 5 of app.js) to be the location of your file. (Just 'credentials.txt' is fine),
+and modify the "From" field in the Data section of the Ajax request (line 20) to be your Twilio phone number.
 It should start working! Pretty simple.
 
 To learn more, here's documentation on the REST API, the api that handles messages and calls.
