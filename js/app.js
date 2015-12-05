@@ -4,7 +4,7 @@ function sendText() {
 //reqeust the credentials for your twilio account
     $.ajax({
         type: 'GET',
-        url: 'http://localhost:63342/webdev/twilio/credentials.txt',
+        url: 'http://localhost:63342/web/twilio/credentials.txt',
         success: function (data) {
 	//if successful in getting the account credentials, use an AJAX POST
 	//to send request to twilio to send your message
@@ -19,7 +19,7 @@ function sendText() {
 			//replace the "from" field with your twilio number.
                 data: {
                     "To": $('#number').val(),
-                    "From": "+15093591138",
+                    "From": "+15093591019",
                     "Body": $('#text').val()
                 },
                 success: function (data) {
@@ -28,7 +28,7 @@ function sendText() {
                     $('#text').val('');
                 },
                 error: function (err) {
-                    alert('You encountered an error, sorry!');
+                    alert('You encountered an error, sorry!', err);
 			console.log(err);
                 }
             });
